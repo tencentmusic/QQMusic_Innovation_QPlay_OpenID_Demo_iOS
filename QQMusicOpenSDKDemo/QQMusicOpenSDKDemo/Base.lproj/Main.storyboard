@@ -1,0 +1,74 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="14460.31" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="BYZ-38-t0r">
+    <device id="retina4_0" orientation="portrait">
+        <adaptation id="fullscreen"/>
+    </device>
+    <dependencies>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="14460.20"/>
+        <capability name="Safe area layout guides" minToolsVersion="9.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <scenes>
+        <!--View Controller-->
+        <scene sceneID="tne-QT-ifu">
+            <objects>
+                <viewController id="BYZ-38-t0r" customClass="ViewController" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="8bC-Xf-vdC">
+                        <rect key="frame" x="0.0" y="0.0" width="320" height="568"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <button opaque="NO" contentMode="scaleToFill" verticalHuggingPriority="251" verticalCompressionResistancePriority="751" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Jx5-4l-so6">
+                                <rect key="frame" x="129" y="137" width="62" height="30"/>
+                                <state key="normal" title="开始授权"/>
+                                <connections>
+                                    <action selector="onClickStartAuth:" destination="BYZ-38-t0r" eventType="touchUpInside" id="ggK-dv-pUQ"/>
+                                </connections>
+                            </button>
+                            <textView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" editable="NO" text="Lorem ipsum " textAlignment="natural" translatesAutoresizingMaskIntoConstraints="NO" id="vRs-zz-gwh">
+                                <rect key="frame" x="26" y="299" width="268" height="134"/>
+                                <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                <textInputTraits key="textInputTraits" autocapitalizationType="sentences"/>
+                            </textView>
+                            <button opaque="NO" contentMode="scaleToFill" misplaced="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="msq-PD-EkS">
+                                <rect key="frame" x="118" y="202" width="91" height="30"/>
+                                <state key="normal" title="请求OpenAPI"/>
+                                <connections>
+                                    <action selector="onClickOpenApi:" destination="BYZ-38-t0r" eventType="touchUpInside" id="ezy-bm-yyj"/>
+                                </connections>
+                            </button>
+                            <button opaque="NO" contentMode="scaleToFill" verticalHuggingPriority="252" verticalCompressionResistancePriority="752" misplaced="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="L2p-56-o5x">
+                                <rect key="frame" x="118" y="102" width="84" height="30"/>
+                                <state key="normal" title="打开QQ音乐"/>
+                                <connections>
+                                    <action selector="onClickOpenQQMusic:" destination="BYZ-38-t0r" eventType="touchUpInside" id="CvH-Hy-FTE"/>
+                                </connections>
+                            </button>
+                        </subviews>
+                        <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                        <constraints>
+                            <constraint firstItem="vRs-zz-gwh" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="3hx-7i-z2m"/>
+                            <constraint firstItem="Jx5-4l-so6" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="61B-OE-8ek"/>
+                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="bottom" secondItem="vRs-zz-gwh" secondAttribute="bottom" constant="135" id="9L0-bJ-zEm"/>
+                            <constraint firstItem="vRs-zz-gwh" firstAttribute="top" relation="greaterThanOrEqual" secondItem="msq-PD-EkS" secondAttribute="bottom" constant="50" id="FgQ-bU-ffq"/>
+                            <constraint firstItem="Jx5-4l-so6" firstAttribute="top" secondItem="L2p-56-o5x" secondAttribute="bottom" constant="35" id="aYu-hf-ONo"/>
+                            <constraint firstItem="vRs-zz-gwh" firstAttribute="top" secondItem="8bC-Xf-vdC" secondAttribute="top" constant="299" id="ax2-5W-2Ig"/>
+                            <constraint firstItem="L2p-56-o5x" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="cmt-HK-fa5"/>
+                            <constraint firstItem="msq-PD-EkS" firstAttribute="top" secondItem="Jx5-4l-so6" secondAttribute="bottom" constant="35" id="cyO-G6-XcH"/>
+                            <constraint firstItem="vRs-zz-gwh" firstAttribute="top" secondItem="msq-PD-EkS" secondAttribute="bottom" constant="67" id="erR-eX-fim"/>
+                            <constraint firstItem="vRs-zz-gwh" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" constant="26" id="fh7-qq-fot"/>
+                            <constraint firstItem="msq-PD-EkS" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="sCb-Rx-nXu"/>
+                        </constraints>
+                        <viewLayoutGuide key="safeArea" id="6Tk-OE-BBY"/>
+                    </view>
+                    <connections>
+                        <outlet property="logView" destination="vRs-zz-gwh" id="Kja-vS-jsX"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="117.59999999999999" y="118.29085457271366"/>
+        </scene>
+    </scenes>
+</document>

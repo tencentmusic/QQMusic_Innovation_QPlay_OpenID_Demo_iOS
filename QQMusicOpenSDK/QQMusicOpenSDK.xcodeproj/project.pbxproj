@@ -1,0 +1,300 @@
+// !$*UTF8*$!
+{
+	archiveVersion = 1;
+	classes = {
+	};
+	objectVersion = 50;
+	objects = {
+
+/* Begin PBXBuildFile section */
+		9D28C704217821E9002A259B /* QQMusicOpenSDK.m in Sources */ = {isa = PBXBuildFile; fileRef = 9D28C703217821E9002A259B /* QQMusicOpenSDK.m */; };
+		9D28C705217821E9002A259B /* QQMusicOpenSDK.h in CopyFiles */ = {isa = PBXBuildFile; fileRef = 9D28C702217821E9002A259B /* QQMusicOpenSDK.h */; };
+		9D82C0A921789F1700C707A8 /* QQMusicUtils.m in Sources */ = {isa = PBXBuildFile; fileRef = 9D82C0A821789F1700C707A8 /* QQMusicUtils.m */; };
+		9D82C0E12179CD3700C707A8 /* RSA.m in Sources */ = {isa = PBXBuildFile; fileRef = 9D82C0DF2179CD3700C707A8 /* RSA.m */; };
+/* End PBXBuildFile section */
+
+/* Begin PBXCopyFilesBuildPhase section */
+		9D28C6FD217821E9002A259B /* CopyFiles */ = {
+			isa = PBXCopyFilesBuildPhase;
+			buildActionMask = 2147483647;
+			dstPath = include;
+			dstSubfolderSpec = 16;
+			files = (
+				9D28C705217821E9002A259B /* QQMusicOpenSDK.h in CopyFiles */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXCopyFilesBuildPhase section */
+
+/* Begin PBXFileReference section */
+		9D28C6FF217821E9002A259B /* libQQMusicOpenSDK.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = libQQMusicOpenSDK.a; sourceTree = BUILT_PRODUCTS_DIR; };
+		9D28C702217821E9002A259B /* QQMusicOpenSDK.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = QQMusicOpenSDK.h; sourceTree = "<group>"; };
+		9D28C703217821E9002A259B /* QQMusicOpenSDK.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = QQMusicOpenSDK.m; sourceTree = "<group>"; };
+		9D82C0A721789F1700C707A8 /* QQMusicUtils.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = QQMusicUtils.h; sourceTree = "<group>"; };
+		9D82C0A821789F1700C707A8 /* QQMusicUtils.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = QQMusicUtils.m; sourceTree = "<group>"; };
+		9D82C0DF2179CD3700C707A8 /* RSA.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = RSA.m; sourceTree = "<group>"; };
+		9D82C0E02179CD3700C707A8 /* RSA.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = RSA.h; sourceTree = "<group>"; };
+/* End PBXFileReference section */
+
+/* Begin PBXFrameworksBuildPhase section */
+		9D28C6FC217821E9002A259B /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXFrameworksBuildPhase section */
+
+/* Begin PBXGroup section */
+		9D28C6F6217821E9002A259B = {
+			isa = PBXGroup;
+			children = (
+				9D28C701217821E9002A259B /* QQMusicOpenSDK */,
+				9D28C700217821E9002A259B /* Products */,
+			);
+			sourceTree = "<group>";
+		};
+		9D28C700217821E9002A259B /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				9D28C6FF217821E9002A259B /* libQQMusicOpenSDK.a */,
+			);
+			name = Products;
+			sourceTree = "<group>";
+		};
+		9D28C701217821E9002A259B /* QQMusicOpenSDK */ = {
+			isa = PBXGroup;
+			children = (
+				9D82C0E02179CD3700C707A8 /* RSA.h */,
+				9D82C0DF2179CD3700C707A8 /* RSA.m */,
+				9D28C702217821E9002A259B /* QQMusicOpenSDK.h */,
+				9D28C703217821E9002A259B /* QQMusicOpenSDK.m */,
+				9D82C0A721789F1700C707A8 /* QQMusicUtils.h */,
+				9D82C0A821789F1700C707A8 /* QQMusicUtils.m */,
+			);
+			path = QQMusicOpenSDK;
+			sourceTree = "<group>";
+		};
+/* End PBXGroup section */
+
+/* Begin PBXNativeTarget section */
+		9D28C6FE217821E9002A259B /* QQMusicOpenSDK */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 9D28C708217821E9002A259B /* Build configuration list for PBXNativeTarget "QQMusicOpenSDK" */;
+			buildPhases = (
+				9D28C6FB217821E9002A259B /* Sources */,
+				9D28C6FC217821E9002A259B /* Frameworks */,
+				9D28C6FD217821E9002A259B /* CopyFiles */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = QQMusicOpenSDK;
+			productName = QQMusicOpenSDK;
+			productReference = 9D28C6FF217821E9002A259B /* libQQMusicOpenSDK.a */;
+			productType = "com.apple.product-type.library.static";
+		};
+/* End PBXNativeTarget section */
+
+/* Begin PBXProject section */
+		9D28C6F7217821E9002A259B /* Project object */ = {
+			isa = PBXProject;
+			attributes = {
+				LastUpgradeCheck = 1000;
+				ORGANIZATIONNAME = "腾讯音乐";
+				TargetAttributes = {
+					9D28C6FE217821E9002A259B = {
+						CreatedOnToolsVersion = 10.0;
+					};
+				};
+			};
+			buildConfigurationList = 9D28C6FA217821E9002A259B /* Build configuration list for PBXProject "QQMusicOpenSDK" */;
+			compatibilityVersion = "Xcode 9.3";
+			developmentRegion = en;
+			hasScannedForEncodings = 0;
+			knownRegions = (
+				en,
+			);
+			mainGroup = 9D28C6F6217821E9002A259B;
+			productRefGroup = 9D28C700217821E9002A259B /* Products */;
+			projectDirPath = "";
+			projectRoot = "";
+			targets = (
+				9D28C6FE217821E9002A259B /* QQMusicOpenSDK */,
+			);
+		};
+/* End PBXProject section */
+
+/* Begin PBXSourcesBuildPhase section */
+		9D28C6FB217821E9002A259B /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				9D82C0E12179CD3700C707A8 /* RSA.m in Sources */,
+				9D28C704217821E9002A259B /* QQMusicOpenSDK.m in Sources */,
+				9D82C0A921789F1700C707A8 /* QQMusicUtils.m in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXSourcesBuildPhase section */
+
+/* Begin XCBuildConfiguration section */
+		9D28C706217821E9002A259B /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++14";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_ENABLE_OBJC_WEAK = YES;
+				CLANG_WARN_BLOCK_CAPTURE_AUTORELEASING = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_COMMA = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DEPRECATED_OBJC_IMPLEMENTATIONS = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_NON_LITERAL_NULL_CONVERSION = YES;
+				CLANG_WARN_OBJC_IMPLICIT_RETAIN_SELF = YES;
+				CLANG_WARN_OBJC_LITERAL_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_RANGE_LOOP_ANALYSIS = YES;
+				CLANG_WARN_STRICT_PROTOTYPES = YES;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
+				CLANG_WARN_UNGUARDED_AVAILABILITY = YES_AGGRESSIVE;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				CODE_SIGN_IDENTITY = "iPhone Developer";
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = dwarf;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				ENABLE_TESTABILITY = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu11;
+				GCC_DYNAMIC_NO_PIC = NO;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_OPTIMIZATION_LEVEL = 0;
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"DEBUG=1",
+					"$(inherited)",
+				);
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 8.0;
+				MTL_ENABLE_DEBUG_INFO = INCLUDE_SOURCE;
+				ONLY_ACTIVE_ARCH = YES;
+				SDKROOT = iphoneos;
+			};
+			name = Debug;
+		};
+		9D28C707217821E9002A259B /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++14";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_ENABLE_OBJC_WEAK = YES;
+				CLANG_WARN_BLOCK_CAPTURE_AUTORELEASING = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_COMMA = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DEPRECATED_OBJC_IMPLEMENTATIONS = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_NON_LITERAL_NULL_CONVERSION = YES;
+				CLANG_WARN_OBJC_IMPLICIT_RETAIN_SELF = YES;
+				CLANG_WARN_OBJC_LITERAL_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_RANGE_LOOP_ANALYSIS = YES;
+				CLANG_WARN_STRICT_PROTOTYPES = YES;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
+				CLANG_WARN_UNGUARDED_AVAILABILITY = YES_AGGRESSIVE;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				CODE_SIGN_IDENTITY = "iPhone Developer";
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
+				ENABLE_NS_ASSERTIONS = NO;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu11;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 8.0;
+				MTL_ENABLE_DEBUG_INFO = NO;
+				SDKROOT = iphoneos;
+				VALIDATE_PRODUCT = YES;
+			};
+			name = Release;
+		};
+		9D28C709217821E9002A259B /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				CODE_SIGN_STYLE = Automatic;
+				OTHER_LDFLAGS = "-ObjC";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SKIP_INSTALL = YES;
+				TARGETED_DEVICE_FAMILY = "1,2";
+			};
+			name = Debug;
+		};
+		9D28C70A217821E9002A259B /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				CODE_SIGN_STYLE = Automatic;
+				OTHER_LDFLAGS = "-ObjC";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SKIP_INSTALL = YES;
+				TARGETED_DEVICE_FAMILY = "1,2";
+			};
+			name = Release;
+		};
+/* End XCBuildConfiguration section */
+
+/* Begin XCConfigurationList section */
+		9D28C6FA217821E9002A259B /* Build configuration list for PBXProject "QQMusicOpenSDK" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				9D28C706217821E9002A259B /* Debug */,
+				9D28C707217821E9002A259B /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		9D28C708217821E9002A259B /* Build configuration list for PBXNativeTarget "QQMusicOpenSDK" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				9D28C709217821E9002A259B /* Debug */,
+				9D28C70A217821E9002A259B /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+/* End XCConfigurationList section */
+	};
+	rootObject = 9D28C6F7217821E9002A259B /* Project object */;
+}
