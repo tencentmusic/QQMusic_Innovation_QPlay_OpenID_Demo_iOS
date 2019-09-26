@@ -13,6 +13,7 @@
 
 static NSString * const OPENID_APP_PRIVATEKEY = @"";
 static NSString * const OPENID_APPID = @"";
+static NSString * const OPENID_PACKAGENAME = @"";
 
 static NSString * const OPENAPI_APPID = @"";
 static NSString * const OPENAPI_APPKEY = @"";
@@ -34,7 +35,7 @@ static NSString * const OPENAPI_APPPRIVATEKEY = @"";
     BOOL installed = [QQMusicOpenSDK isQQMusicInstalled];
     NSString *msg = [NSString stringWithFormat:@"OpenID授权Demo\nQQ音乐:%@\nSDK版本:%@",installed?@"已安装":@"未安装",QQMusicOpenSDKVersion];
     self.logView.text =msg;
-    [QQMusicOpenSDK registerAppID:OPENID_APPID SecretKey:OPENID_APP_PRIVATEKEY callbackUrl:@"qm123456://" delegate:self];
+    [QQMusicOpenSDK registerAppID:OPENID_APPID packageName:OPENID_PACKAGENAME SecretKey:OPENID_APP_PRIVATEKEY callbackUrl:@"qm123456://" delegate:self];
 }
 
 

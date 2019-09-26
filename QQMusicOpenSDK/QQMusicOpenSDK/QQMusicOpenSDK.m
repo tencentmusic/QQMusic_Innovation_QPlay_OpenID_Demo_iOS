@@ -20,6 +20,7 @@ static NSString * const QQMusic_Scheme_Domain = @"qqmusic://qq.com/other/openid"
 
 static NSString * const kScheme_Cmd = @"cmd";
 static NSString * const kScheme_AppId = @"appId";
+static NSString * const kScheme_PackageName = @"packageName";
 static NSString * const kScheme_Nonce = @"nonce";
 static NSString * const kScheme_Sign = @"sign";
 static NSString * const kScheme_CallbackUrl = @"callbackUrl";
@@ -47,6 +48,7 @@ typedef NS_ENUM(NSInteger, QMOpenIDAuthResult) {
 @interface QQMusicOpenSDK()
 
 @property (nonatomic, strong) NSString *appId;
+@property (nonatomic, strong) NSString *packageName;
 @property (nonatomic, strong) NSString *secretKey;
 @property (nonatomic, strong) NSString *callbackUrl;
 /**
@@ -69,9 +71,9 @@ typedef NS_ENUM(NSInteger, QMOpenIDAuthResult) {
 }
 
 
-+ (BOOL)registerAppID:(NSString*)appId SecretKey:(NSString*)secretKey callbackUrl:(NSString*)callbackUrl delegate:(id<QQMusicOpenSDKDelegate>)delegate
++ (BOOL)registerAppID:(NSString*)appId packageName:(NSString *)packageName SecretKey:(NSString*)secretKey callbackUrl:(NSString*)callbackUrl delegate:(id<QQMusicOpenSDKDelegate>)delegate
 {
-    if (appId.length==0 || secretKey.length==0)
+    if (appId.length==0 || secretKey.length==0 || packageName.length == 0)
     {
         NSLog(@"非法参数");
         return NO;
@@ -79,6 +81,7 @@ typedef NS_ENUM(NSInteger, QMOpenIDAuthResult) {
     [QQMusicOpenSDK sharedInstance].appId = appId;
     [QQMusicOpenSDK sharedInstance].secretKey = secretKey;
     [QQMusicOpenSDK sharedInstance].callbackUrl = callbackUrl;
+    [QQMusicOpenSDK sharedInstance].packageName = packageName;
     [QQMusicOpenSDK sharedInstance].delegate = delegate;
     return YES;
 }
@@ -100,6 +103,7 @@ typedef NS_ENUM(NSInteger, QMOpenIDAuthResult) {
     }
     NSDictionary *param = @{
                             kScheme_Cmd:@"open",
+                            kScheme_PackageName:[QQMusicOpenSDK sharedInstance].packageName,
                             kScheme_AppId:[QQMusicOpenSDK sharedInstance].appId
                             };
     NSString *json = [QQMusicUtils strWithJsonObject:param];
@@ -133,6 +137,7 @@ typedef NS_ENUM(NSInteger, QMOpenIDAuthResult) {
     if ([QQMusicOpenSDK sharedInstance].appId.length==0
         || [QQMusicOpenSDK sharedInstance].secretKey.length==0
         || ![QQMusicOpenSDK isQQMusicInstalled]
+        || [QQMusicOpenSDK sharedInstance].packageName.length == 0
         || [QQMusicOpenSDK sharedInstance].delegate==NULL)
     {
         return NO;
@@ -155,6 +160,7 @@ typedef NS_ENUM(NSInteger, QMOpenIDAuthResult) {
     NSDictionary *param = @{
                             kScheme_Cmd:@"auth",
                             kScheme_AppId:[QQMusicOpenSDK sharedInstance].appId,
+                            kScheme_PackageName:[QQMusicOpenSDK sharedInstance].packageName,
                             kScheme_EncryptString:encryptString,
                             kScheme_CallbackUrl:[QQMusicOpenSDK sharedInstance].callbackUrl
                             };
