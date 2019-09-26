@@ -7,6 +7,7 @@
 ``` objective-c
 static NSString * const OPENID_APP_PRIVATEKEY = @"";
 static NSString * const OPENID_APPID = @"";
+static NSString * const OPENID_PACKAGENAME = @""
 ```
 
 并请一并修改工程设置里的`Bundle Identifier`的取值，与注册在QQ音乐的PackageName保持一致。
