@@ -472,6 +472,9 @@ static NSData *base64_decode(NSString *str){
                                       signedHashBytes,
                                       signedHashBytesSize);
     
+    if (hashBytes)
+        free(hashBytes);
+    
     return status == errSecSuccess;
 }
 
