@@ -28,6 +28,7 @@ static NSString * const kScheme_EncryptString= @"encryptString";
 static NSString * const kScheme_ErrorCode= @"errorCode";
 static NSString * const kScheme_ErrorMsg= @"errorMsg";
 static NSString * const kScheme_OpenId= @"openId";
+static NSString * const kScheme_ExpireTime= @"expireTime";
 static NSString * const kScheme_OpenToken= @"openToken";
 static NSString * const kScheme_Ret= @"ret";
 
@@ -210,10 +211,10 @@ typedef NS_ENUM(NSInteger, QMOpenIDAuthResult) {
                 //验证通过
                 NSString *openID = [decryptDict objectForKey:kScheme_OpenId];
                 NSString *openToken = [decryptDict objectForKey:kScheme_OpenToken];
-                NSLog(@"验证通过 OpenID:%@,OpenToken:%@",openID,openToken);
-                if ([[QQMusicOpenSDK sharedInstance].delegate respondsToSelector:@selector(onAuthSuccess:Token:)])
+                NSTimeInterval expireTime = [QQMusicUtils getDoubleFromJSON:decryptDict forKey:kScheme_ExpireTime];
+                if ([[QQMusicOpenSDK sharedInstance].delegate respondsToSelector:@selector(onAuthSuccess:Token:expireTime:)])
                 {
-                    [[QQMusicOpenSDK sharedInstance].delegate onAuthSuccess:openID Token:openToken];
+                    [[QQMusicOpenSDK sharedInstance].delegate onAuthSuccess:openID Token:openToken expireTime:expireTime];
                 }
             }
         }

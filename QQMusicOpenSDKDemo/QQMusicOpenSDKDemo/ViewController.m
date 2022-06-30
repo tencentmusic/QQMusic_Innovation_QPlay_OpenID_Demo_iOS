@@ -21,9 +21,9 @@ static NSString * const OPENAPI_APPPRIVATEKEY = @"";
 
 @interface ViewController ()<QQMusicOpenSDKDelegate>
 
-@property (nonatomic,strong) NSString *openId;
-@property (nonatomic,strong) NSString *openToken;
-
+@property (nonatomic) NSString *openId;
+@property (nonatomic) NSString *openToken;
+@property (nonatomic) NSTimeInterval expireTime;
 
 @end
 
@@ -115,10 +115,11 @@ static NSString * const OPENAPI_APPPRIVATEKEY = @"";
     [self presentViewController:alert1 animated:YES completion:nil];
 }
 
-- (void)onAuthSuccess:(NSString *)openID Token:(NSString *)openToken {
-    NSString *msgText = [NSString stringWithFormat:@"授权成功\nOpenID:%@\nOpenToken:%@",openID,openToken];
+- (void)onAuthSuccess:(NSString *)openID Token:(NSString *)openToken expireTime:(NSTimeInterval)expireTime{
+    NSString *msgText = [NSString stringWithFormat:@"授权成功\nOpenID:%@\nOpenToken:%@ expireTime:(%f)",openID,openToken,expireTime];
     self.openId = openID;
     self.openToken = openToken;
+    self.expireTime = expireTime;
     
     UIAlertController * alert1 = [UIAlertController alertControllerWithTitle:nil message:msgText preferredStyle:UIAlertControllerStyleAlert];
     UIAlertAction *exitAction = [UIAlertAction actionWithTitle:@"确定" style:UIAlertActionStyleCancel handler:nil];

@@ -26,7 +26,7 @@ typedef NS_ENUM(NSInteger, QQMusicLogLevel) {
  @param openID QQ音乐分配的OpenID
  @param openToken QQ音乐分配的OpenID
  */
-- (void)onAuthSuccess:(NSString*)openID Token:(NSString*)openToken;
+- (void)onAuthSuccess:(NSString*)openID Token:(NSString*)openToken expireTime:(NSTimeInterval)expireTime;
 
 
 /**

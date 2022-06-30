@@ -182,4 +182,17 @@
     return nil;
 }
 
++ (double)getDoubleFromJSON:(NSDictionary *)json forKey:(NSString *)key {
+    NSObject *object = [json objectForKey:key];
+    if ([object isKindOfClass:[NSNumber class]]) {
+        NSNumber *number = (NSNumber *)object;
+        return number.doubleValue;
+    } else if ([object isKindOfClass:[NSString class]]){
+        NSString *string = (NSString *)object;
+        return string.doubleValue;
+    } else {
+        return 0;
+    }
+}
+
 @end
